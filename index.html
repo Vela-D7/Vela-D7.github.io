@@ -310,11 +310,11 @@ nav{
   color:#fff;
 }
 .nav-links{
-  display:flex;gap:2rem;list-style:none;
+  display:flex;gap:1.2rem;list-style:none;
 }
 .nav-links a{
   font-family:'Space Mono',monospace;
-  font-size:0.65rem;
+  font-size:0.55rem;
   letter-spacing:0.2em;
   text-transform:uppercase;
   text-decoration:none;
@@ -396,13 +396,22 @@ body.era-film{
   --card-border:rgba(212,146,42,0.15);
 }
 body.era-ai{
-  --bg:#000814;
-  --accent:#00d4ff;
-  --accent2:#00ff9f;
-  --text:#a8f0ff;
-  --muted:rgba(168,240,255,0.4);
-  --card-bg:rgba(0,212,255,0.05);
-  --card-border:rgba(0,212,255,0.15);
+  --bg:#000d00;
+  --accent:#00ff41;
+  --accent2:#00cc33;
+  --text:#00ff41;
+  --muted:rgba(0,255,65,0.45);
+  --card-bg:rgba(0,255,65,0.05);
+  --card-border:rgba(0,255,65,0.18);
+}
+body.era-blog{
+  --bg:#00071a;
+  --accent:#4f8fff;
+  --accent2:#7eb3ff;
+  --text:#c8daff;
+  --muted:rgba(200,218,255,0.45);
+  --card-bg:rgba(79,143,255,0.05);
+  --card-border:rgba(79,143,255,0.18);
 }
 body.era-heritage{
   --bg:#120800;
@@ -422,14 +431,32 @@ body.era-vr{
   --card-bg:rgba(255,0,238,0.05);
   --card-border:rgba(255,0,238,0.15);
 }
+body.era-cert{
+  --bg:#001a12;
+  --accent:#10b981;
+  --accent2:#34d399;
+  --text:#d1fae5;
+  --muted:rgba(209,250,229,0.45);
+  --card-bg:rgba(16,185,129,0.05);
+  --card-border:rgba(16,185,129,0.18);
+}
+body.era-experience{
+  --bg:#0a0014;
+  --accent:#c084fc;
+  --accent2:#a855f7;
+  --text:#e9d5ff;
+  --muted:rgba(233,213,255,0.45);
+  --card-bg:rgba(192,132,252,0.05);
+  --card-border:rgba(192,132,252,0.18);
+}
 body.era-xr{
-  --bg:#e8f4ff;
-  --accent:#1d4ed8;
-  --accent2:#0ea5e9;
-  --text:#0f172a;
-  --muted:rgba(15,23,42,0.5);
-  --card-bg:rgba(29,78,216,0.05);
-  --card-border:rgba(29,78,216,0.12);
+  --bg:#d8e8f5;
+  --accent:#2a5298;
+  --accent2:#3b6abf;
+  --text:#1a2e4a;
+  --muted:rgba(26,46,74,0.55);
+  --card-bg:rgba(42,82,152,0.06);
+  --card-border:rgba(42,82,152,0.14);
 }
 
 /* light era adjustments */
@@ -567,11 +594,16 @@ a,button,.tl-dot{cursor:none}
   <div class="nav-logo">VELA — Portfolio</div>
   <ul class="nav-links">
     <li><a href="#era-film">Film</a></li>
+    <li><a href="#era-blog">Blog</a></li>
     <li><a href="#era-ai">AI</a></li>
-    <li><a href="#era-heritage">Heritage</a></li>
     <li><a href="#era-vr">VR</a></li>
-    <li><a href="#era-xr">Future</a></li>
-    <li><a href="#era-experience">Work</a></li>
+    <li><a href="#era-heritage">Heritage</a></li>
+    <li><a href="#era-xr">Future XR</a></li>
+    <li><a href="#era-experience">Experience</a></li>
+    <li><a href="#era-cert">Certs</a></li>
+    <li><a href="#era-hire">Contact</a></li>
+    <li><a href="https://linkedin.com/in/velmurugan-c" target="_blank">LinkedIn</a></li>
+    <li><a href="mailto:ai.velmuruganc@gmail.com">Mail</a></li>
     <li><a href="https://github.com/Vela-D7" target="_blank">GitHub</a></li>
   </ul>
   <button id="hamburger" aria-label="Menu" style="display:none;background:none;border:none;color:#fff;padding:0.3rem;z-index:21;cursor:pointer">
@@ -590,13 +622,17 @@ a,button,.tl-dot{cursor:none}
   flex-direction:column;align-items:center;justify-content:center;gap:2.5rem;
 ">
   <a class="mob-link" href="#era-film" onclick="closeDrawer()">Film</a>
+  <a class="mob-link" href="#era-blog" onclick="closeDrawer()">Blog</a>
   <a class="mob-link" href="#era-ai" onclick="closeDrawer()">AI</a>
-  <a class="mob-link" href="#era-heritage" onclick="closeDrawer()">Heritage</a>
   <a class="mob-link" href="#era-vr" onclick="closeDrawer()">VR</a>
-  <a class="mob-link" href="#era-xr" onclick="closeDrawer()">Future</a>
-  <a class="mob-link" href="#era-experience" onclick="closeDrawer()">Work</a>
-  <a class="mob-link" href="https://github.com/Vela-D7" target="_blank" onclick="closeDrawer()">GitHub</a>
+  <a class="mob-link" href="#era-heritage" onclick="closeDrawer()">Heritage</a>
+  <a class="mob-link" href="#era-xr" onclick="closeDrawer()">Future XR</a>
+  <a class="mob-link" href="#era-experience" onclick="closeDrawer()">Experience</a>
+  <a class="mob-link" href="#era-cert" onclick="closeDrawer()">Certs</a>
   <a class="mob-link" href="#era-hire" onclick="closeDrawer()">Contact</a>
+  <a class="mob-link" href="https://linkedin.com/in/velmurugan-c" target="_blank" onclick="closeDrawer()">LinkedIn</a>
+  <a class="mob-link" href="mailto:ai.velmuruganc@gmail.com" onclick="closeDrawer()">Mail</a>
+  <a class="mob-link" href="https://github.com/Vela-D7" target="_blank" onclick="closeDrawer()">GitHub</a>
 </div>
 
 <!-- Three.js canvas -->
@@ -610,7 +646,9 @@ a,button,.tl-dot{cursor:none}
   <div class="tl-dot" data-era="heritage" onclick="scrollToEra('era-heritage')" title="Heritage"></div>
   <div class="tl-dot" data-era="vr" onclick="scrollToEra('era-vr')" title="VR"></div>
   <div class="tl-dot" data-era="xr" onclick="scrollToEra('era-xr')" title="XR"></div>
+  <div class="tl-dot" data-era="blog" onclick="scrollToEra('era-blog')" title="Blog"></div>
   <div class="tl-dot" data-era="experience" onclick="scrollToEra('era-experience')" title="Work"></div>
+  <div class="tl-dot" data-era="cert" onclick="scrollToEra('era-cert')" title="Certs"></div>
   <div class="tl-dot" data-era="hire" onclick="scrollToEra('era-hire')" title="Hire"></div>
 </div>
 
@@ -659,22 +697,89 @@ a,button,.tl-dot{cursor:none}
       </div>
     </div>
     <div class="card-grid reveal">
-      <div class="card">
-        <div class="card-title">M69 Robo Sapiens</div>
-        <div class="card-body">Experimental sci-fi film exploring human–machine futures. AI-assisted post-production pipeline.</div>
+      <a class="card" href="https://youtube.com/shorts/icRygzjUdDM?feature=share" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">M69 Robo Sapiens ↗</div>
+        <div class="card-body">Experimental sci-fi film with AI-assisted VFX. Writer, Director &amp; Post-Production.</div>
+      </a>
+      <a class="card" href="https://www.loyolacollege.edu/viscom/home" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">BSc Visual Communication ↗</div>
+        <div class="card-body">Loyola College, India. Film direction, media production, design &amp; cinematic storytelling.</div>
+      </a>
+      <a class="card" href="https://www.youtube.com/@EMAXStayTuned" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Freelance Editor &amp; Colourist ↗</div>
+        <div class="card-body">2017–present. Branded content, digital media, promotional video &amp; colour grading.</div>
+      </a>
+      <a class="card" href="https://www.mangopost.in/projects.html" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">The Picture Machine — DI Internship ↗</div>
+        <div class="card-body">Colour grading &amp; DI studio. Films: Gypsy (2020), Dharala Prabhu (2020), Soorarai Pottru (2020), Locked (2020), Zee Thirai promos.</div>
+      </a>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div style="width:100%;margin-top:4rem;border-top:1px solid var(--card-border)"></div>
+
+  <!-- Notable Film Works -->
+  <div style="width:100%;margin-top:5rem;padding-top:3rem;border-top:1px solid var(--card-border)">
+    <p class="section-sub-label reveal" style="margin-bottom:1.5rem;font-size:0.7rem;letter-spacing:0.4em">▶ &nbsp; Notable Film Works — Click to Watch</p>
+    <div class="card-grid reveal">
+
+      <a class="card" href="https://www.youtube.com/watch?v=-Dx9X8SQw2A" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Mathippirkuriya Aiyya ↗</div>
+        <div class="card-body">Screenwriter · Editor · Colorist<br>Tamil Short Film · 2019</div>
+      </a>
+
+      <a class="card" href="https://www.youtube.com/results?search_query=Eithal+Ambu+Tamil+short+film+2019" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Eithal Ambu ↗</div>
+        <div class="card-body">Direction · Post Production<br>Tamil Short Film · 2019</div>
+      </a>
+
+      <a class="card" href="https://www.youtube.com/watch?v=E8hHOUb63kc" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Enga Thala Dhoni ↗</div>
+        <div class="card-body">Video Editor · Colorist<br>Tamil Album Song · 2019</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ BLOG / WRITING ════════════════════════ -->
+<section class="era" id="era-blog">
+  <div class="era-divider"></div>
+  <div class="era-number">05</div>
+  <div class="era-inner">
+    <div>
+      <p class="era-meta reveal">Writing · Research · Ideas</p>
+      <h2 class="era-heading reveal">Blog &amp;<br>Published Work</h2>
+      <p class="era-subheading reveal">"Data is the new oil, but storytelling is the engine that drives its power."</p>
+      <p class="era-desc reveal">
+        Published long-form essays and research articles on the intersection of AI, society, and media — covering bias in machine learning systems, India's digital economy, and the ethics of emerging technology. Writing hosted on Medium.
+      </p>
+      <div class="skills-list reveal">
+        <span class="tag">AI Ethics</span>
+        <span class="tag">Research Writing</span>
+        <span class="tag">Media Studies</span>
+        <span class="tag">Critical Theory</span>
       </div>
-      <div class="card">
-        <div class="card-title">BSc Visual Communication</div>
-        <div class="card-body">Loyola College, India. Specialising in media production, design, and cinematic storytelling.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Freelance Production</div>
-        <div class="card-body">2017–present. Digital media, branded content, and promotional video delivery.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">DI Studio Internship</div>
-        <div class="card-body">Colour grading workflows. Professional film post-production standards.</div>
-      </div>
+      <a class="hire-link reveal" href="https://medium.com/@velmurugan-c" target="_blank" style="display:inline-block;margin-top:2rem;font-size:0.7rem">Read on Medium ↗</a>
+    </div>
+    <div class="card-grid reveal">
+      <a class="card" href="https://medium.com/@velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Sexism, Racism &amp; Casteism in AI</div>
+        <div class="card-body">A critical examination of bias and discrimination embedded in artificial intelligence systems. Published on Medium.</div>
+      </a>
+      <a class="card" href="https://medium.com/@velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">India's Caste &amp; Colonial AI</div>
+        <div class="card-body">Exploring how British colonial history and caste systems manifest in India's AI development pipeline.</div>
+      </a>
+      <a class="card" href="https://medium.com/@velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">AI &amp; India's Youth Economy</div>
+        <div class="card-body">Harnessing the power of India's young digital population for an AI-driven economic future.</div>
+      </a>
+      <a class="card" href="https://medium.com/@velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Visual Analysis — Attack on Titan</div>
+        <div class="card-body">Comparative visual and narrative analysis of Hajime Isayama's acclaimed anime series through a cinematic lens.</div>
+      </a>
     </div>
   </div>
 </section>
@@ -685,25 +790,25 @@ a,button,.tl-dot{cursor:none}
   <div class="era-number">02</div>
   <div class="era-inner">
     <div class="card-grid reveal">
-      <div class="card">
-        <div class="card-title">Machine Learning</div>
+      <a class="card" href="https://eportfolio.mygreatlearning.com/velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Machine Learning ↗</div>
         <div class="card-body">Prediction models, classification, regression — Python-first workflows at scale.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Chatbot Systems</div>
+      </a>
+      <a class="card" href="https://eportfolio.mygreatlearning.com/velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Chatbot Systems ↗</div>
         <div class="card-body">NLP pipeline development. Applied conversational AI using Python frameworks.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Computer Vision</div>
+      </a>
+      <a class="card" href="https://eportfolio.mygreatlearning.com/velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Computer Vision ↗</div>
         <div class="card-body">Image-based prediction models. Foundation for LiDAR + camera perception research.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">PGP — AI &amp; ML</div>
+      </a>
+      <a class="card" href="https://eportfolio.mygreatlearning.com/velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">PGP — AI &amp; ML ↗</div>
         <div class="card-body">UT Austin + Great Lakes Institute. Industry-grade AI/ML programme.</div>
-      </div>
+      </a>
     </div>
     <div>
-      <p class="era-meta reveal">2022 — 2023 · Intelligence</p>
+      <p class="era-meta reveal">2021 — 2022 · Intelligence</p>
       <h2 class="era-heading reveal">Artificial<br>Intelligence</h2>
       <p class="era-subheading reveal">"Teaching machines to see what humans overlook."</p>
       <p class="era-desc reveal">
@@ -724,13 +829,59 @@ a,button,.tl-dot{cursor:none}
   </div>
 </section>
 
-<!-- ══ ERA 3 — HERITAGE AR ═══════════════════ -->
-<section class="era" id="era-heritage">
+<!-- ══ ERA 3 — VR WORLDS ══════════════════════ -->
+<section class="era" id="era-vr">
   <div class="era-divider"></div>
   <div class="era-number">03</div>
   <div class="era-inner">
+    <div class="card-grid reveal">
+      <a class="card" href="https://www.youtube.com/shorts/4_ntuUFiJhY" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Empathy Machine: The Hard-to-Hear Encounter ↗</div>
+        <div class="card-body">A VR experience immersing users in a restaurant environment where background noise and auditory distortions simulate hearing difficulties. Built with Yarn Spinner dialogue, haptic feedback, custom audio design, and Airtable feedback integration — fostering empathy through embodied storytelling.</div>
+      </a>
+      <a class="card" href="https://www.linkedin.com/posts/velmurugan-c_sustainabilitythroughtech-futureofmedia-unity3d-activity-7408574896597012481--VxB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC8qSzoBhFJQZcgwpkU3iFF1JhdwiQtpi4I" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Tide of Hope VR</div>
+        <div class="card-body">Dive into Mumbles Bay, Swansea — rescue stranded turtles, clear ocean waste, and race a rising tide. A climate-conscious VR narrative built in Unity with AI voice-driven storytelling and XR Interaction Toolkit.</div>
+      </a>
+      <a class="card" href="https://youtu.be/SAoyjXWpKqo" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Aqua — VESHUIS ↗</div>
+        <div class="card-body">An immersive VR training simulation for Swansea University's CSAR Tropical Lab — guiding students through aquaculture procedures via NPC instruction, animated UI, and performance-tracked independent practice.</div>
+      </a>
+      <a class="card" href="https://www.linkedin.com/posts/velmurugan-c_retrovibes-industry4point0-retrotech-activity-7312755328742264835-O0a1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC8qSzoBhFJQZcgwpkU3iFF1JhdwiQtpi4I" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Festo AR — Industry 4.0</div>
+        <div class="card-body">An AR interface for Festo's Cyber-Physical Factory: digital twin visualisation, a controllable Wall-E robot, MS-DOS-inspired UI, and role-adaptive controls for operators, trainees, and managers. Built with Vuforia and Unity.</div>
+      </a>
+    </div>
     <div>
-      <p class="era-meta reveal">2025 · Heritage XR</p>
+      <p class="era-meta reveal">2024 — 2025 · Immersive Design</p>
+      <h2 class="era-heading reveal">Virtual<br>Worlds</h2>
+      <p class="era-subheading reveal">"Presence is not a feature — it is the point."</p>
+      <p class="era-desc reveal">
+        MSc Virtual Reality projects at Swansea University — spanning environmental storytelling,
+        aquaculture training simulation, industrial AR, and narrative game design.
+        Each project explores presence, purpose, and the power of immersive technology
+        to educate, move, and transform. Core stack: Unity 3D, XR Interaction Toolkit, Vuforia, C#.
+      </p>
+      <div class="skills-list reveal">
+        <span class="tag">Unity 3D</span>
+        <span class="tag">XR Interaction Toolkit</span>
+        <span class="tag">C#</span>
+        <span class="tag">NavMesh AI</span>
+        <span class="tag">Yarn Spinner</span>
+        <span class="tag">Spatial UI</span>
+        <span class="tag">Simulation</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ERA 4 — HERITAGE AR ═══════════════════ -->
+<section class="era" id="era-heritage">
+  <div class="era-divider"></div>
+  <div class="era-number">04</div>
+  <div class="era-inner">
+    <div>
+      <p class="era-meta reveal">2025 — 2026 · Heritage XR</p>
       <h2 class="era-heading reveal">Sands of<br>Time AR</h2>
       <p class="era-subheading reveal">"Layering the past onto the present — stone by stone."</p>
       <p class="era-desc reveal">
@@ -750,68 +901,22 @@ a,button,.tl-dot{cursor:none}
       </div>
     </div>
     <div class="card-grid reveal">
-      <div class="card">
-        <div class="card-title">Oystermouth Castle</div>
+      <a class="card" href="https://vela-d7.github.io/Sands-of-Time-AR/" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Oystermouth Castle ↗</div>
         <div class="card-body">Primary test site. AR chapel reconstruction and medieval visualisation using XREAL Beam Pro.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Swansea Castle AR</div>
-        <div class="card-body">Concept system for lost architecture reconstruction via mobile and wearable XR.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">MSc Dissertation</div>
-        <div class="card-body">Design Thinking &amp; UI/UX for AR Heritage Experiences. 26,500-word research study.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Heritage AR Solutions</div>
+      </a>
+      <a class="card" href="https://aivelmuruganc.wixsite.com/sugar-creative" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Sugar Creative — Case Study ↗</div>
+        <div class="card-body">Digital Marketing subject case study from MSc Virtual Reality at Swansea University. Welsh Heritage Reimagined — a creative studio platform built around Sands of Time AR, showcasing portfolio, blog, and immersive XR experiences for Welsh cultural heritage.</div>
+      </a>
+      <a class="card" href="https://vela-d7.github.io/Sands-of-Time-AR/" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">MSc Dissertation ↗</div>
+        <div class="card-body">Design Thinking &amp; UI/UX for AR Heritage Experiences. Research study at Swansea University.</div>
+      </a>
+      <a class="card" href="https://vela-d7.github.io/Sands-of-Time-AR/" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Heritage AR Solutions ↗</div>
         <div class="card-body">Founder. Creative agency developing AR experiences for Welsh heritage sites.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ ERA 4 — VR WORLDS ══════════════════════ -->
-<section class="era" id="era-vr">
-  <div class="era-divider"></div>
-  <div class="era-number">04</div>
-  <div class="era-inner">
-    <div class="card-grid reveal">
-      <div class="card">
-        <div class="card-title">Egyptian Tomb VR</div>
-        <div class="card-body">Narrative horror/adventure. Grab systems, NPC dialogue (Yarn Spinner), NavMesh AI enemies, baked lighting.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Sci-Fi Stealth Lab</div>
-        <div class="card-body">Puzzle-stealth VR prototype. Dual narrative outcomes, reactor mechanics, time-machine theming.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">Forest Fire Simulation</div>
-        <div class="card-body">Cellular automata-based environmental spread model. Digital twin concepts for disaster training.</div>
-      </div>
-      <div class="card">
-        <div class="card-title">VR Golf Prototype</div>
-        <div class="card-body">Sports interaction with physics calibration, motion feedback, and player training systems.</div>
-      </div>
-    </div>
-    <div>
-      <p class="era-meta reveal">2025 · Immersive Design</p>
-      <h2 class="era-heading reveal">Virtual<br>Worlds</h2>
-      <p class="era-subheading reveal">"Presence is not a feature — it is the point."</p>
-      <p class="era-desc reveal">
-        MSc Virtual Reality projects at Swansea University. A portfolio of Unity-built experiences
-        spanning narrative VR, AI-driven game systems, physics-based sport simulations, and
-        cellular automata environments. Core stack: Unity 3D, XR Interaction Toolkit,
-        C#, NavMesh, Yarn Spinner.
-      </p>
-      <div class="skills-list reveal">
-        <span class="tag">Unity 3D</span>
-        <span class="tag">XR Interaction Toolkit</span>
-        <span class="tag">C#</span>
-        <span class="tag">NavMesh AI</span>
-        <span class="tag">Yarn Spinner</span>
-        <span class="tag">Spatial UI</span>
-        <span class="tag">Simulation</span>
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -855,26 +960,27 @@ a,button,.tl-dot{cursor:none}
 </section>
 
 
+
 <!-- ══ EXPERIENCE ════════════════════════════ -->
 <section class="era" id="era-experience">
   <div class="era-divider"></div>
-  <div class="era-number">06</div>
+  <div class="era-number">07</div>
   <div style="width:100%">
     <p class="era-meta reveal">Professional History</p>
     <h2 class="era-heading reveal" style="margin-bottom:3rem">Experience</h2>
 
     <!-- RThree -->
-    <div class="exp-card reveal">
+    <a class="exp-card reveal" href="https://www.linkedin.com/in/velmurugan-c/" target="_blank" style="text-decoration:none;display:block">
       <div class="exp-header">
         <div>
           <div class="exp-role">Chief Innovation Officer</div>
           <div class="exp-company">RThree <span class="exp-dot">·</span> Full-time</div>
-          <div class="exp-meta">Jul 2023 – Present &nbsp;·&nbsp; 2 yrs 10 mos &nbsp;·&nbsp; Chennai, India · On-site</div>
+          <div class="exp-meta">Jul 2023 – Jan 2026 &nbsp;·&nbsp; 2 yrs 7 mos &nbsp;·&nbsp; Chennai, India · Hybrid</div>
         </div>
-        <div class="exp-badge">CIO</div>
+        <div class="exp-badge">CIO ↗</div>
       </div>
       <p class="exp-desc">
-        RThree is a Chennai-based creative and branding agency founded in 2020, specialising in logo design, 2D &amp; 3D animation, brand identity, digital marketing, UX/UI, motion graphics, and web development. As Chief Innovation Officer, leading strategic direction, business development, and creative innovation across client campaigns and brand transformation projects.
+        RThree is a Chennai-based creative and branding agency founded in 2020, specialising in logo design, 2D &amp; 3D animation, brand identity, digital marketing, UX/UI, motion graphics, and web development. As Chief Innovation Officer, led strategic direction, business development, and creative innovation across client campaigns and brand transformation projects.
       </p>
       <div class="skills-list" style="margin-top:1rem">
         <span class="tag">Business Strategy</span>
@@ -883,20 +989,20 @@ a,button,.tl-dot{cursor:none}
         <span class="tag">Creative Direction</span>
         <span class="tag">Digital Marketing</span>
       </div>
-    </div>
+    </a>
 
     <!-- StayTune -->
-    <div class="exp-card reveal">
+    <a class="exp-card reveal" href="https://www.linkedin.com/in/velmurugan-c/" target="_blank" style="text-decoration:none;display:block">
       <div class="exp-header">
         <div>
           <div class="exp-role">Editor</div>
           <div class="exp-company">StayTune <span class="exp-dot">·</span> Part-time</div>
-          <div class="exp-meta">Sep 2021 – Present &nbsp;·&nbsp; 4 yrs 8 mos &nbsp;·&nbsp; Greater Chennai Area · Hybrid</div>
+          <div class="exp-meta">Sep 2021 – Jan 2026 &nbsp;·&nbsp; 4 yrs 5 mos &nbsp;·&nbsp; Greater Chennai Area · Hybrid</div>
         </div>
-        <div class="exp-badge">ED</div>
+        <div class="exp-badge">ED ↗</div>
       </div>
       <p class="exp-desc">
-        StayTune is a digital media and content production company based in Chennai. Part-time editorial role covering video production, content editing, and media asset delivery across digital platforms — combining storytelling craft with technical post-production workflows.
+        StayTune is a digital media and content production company based in Chennai. Part-time editorial role covering video production, content editing, and media asset delivery across digital platforms — combining storytelling craft with technical post-production workflows. Role concluded January 2026.
       </p>
       <div class="skills-list" style="margin-top:1rem">
         <span class="tag">Video Production</span>
@@ -904,17 +1010,17 @@ a,button,.tl-dot{cursor:none}
         <span class="tag">Post Production</span>
         <span class="tag">Digital Media</span>
       </div>
-    </div>
+    </a>
 
     <!-- The Madras Branding Company -->
-    <div class="exp-card reveal">
+    <a class="exp-card reveal" href="https://www.linkedin.com/in/velmurugan-c/" target="_blank" style="text-decoration:none;display:block">
       <div class="exp-header">
         <div>
           <div class="exp-role">Video Editor</div>
           <div class="exp-company">The Madras Branding Company <span class="exp-dot">·</span> Full-time</div>
           <div class="exp-meta">Oct 2020 – Feb 2021 &nbsp;·&nbsp; 5 mos &nbsp;·&nbsp; Chennai, India · On-site</div>
         </div>
-        <div class="exp-badge">VE</div>
+        <div class="exp-badge">VE ↗</div>
       </div>
       <p class="exp-desc">
         The Madras Branding Company (TMBC) is a Chennai-based technology marketing and brand consulting agency founded in 2020, with 51–200 employees and clients including Flipkart, Polygon, and Firedrops. Delivered professional video editing and post-production work within a fast-paced creative agency environment, using Final Cut Pro and production pipeline workflows.
@@ -925,11 +1031,51 @@ a,button,.tl-dot{cursor:none}
         <span class="tag">Production Pipelines</span>
         <span class="tag">Brand Campaigns</span>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
 
+<!-- ══ CERTIFICATIONS ═══════════════════════ -->
+
+
+
+
+<!-- ══ CERTIFICATIONS ════════════════════════ -->
+<section class="era" id="era-cert">
+  <div class="era-divider"></div>
+  <div class="era-number">08</div>
+  <div style="width:100%">
+    <p class="era-meta reveal">Lifelong Learning · Verified Credentials</p>
+    <h2 class="era-heading reveal" style="margin-bottom:3rem">Certifications</h2>
+    <div class="card-grid reveal">
+      <a class="card" href="https://coursera.org/share/20e932fe35383be15ddd10a0013fbfc5" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">AI For Everyone ↗</div>
+        <div class="card-body">DeepLearning.AI · 2021<br>Foundation in AI concepts, strategy, and cross-functional applications.</div>
+      </a>
+      <a class="card" href="https://eportfolio.mygreatlearning.com/velmurugan-c" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">PGP — AI &amp; Machine Learning ↗</div>
+        <div class="card-body">University of Texas at Austin + Great Lakes · 2022<br>Industry-grade ML, deep learning, computer vision, NLP, and AI capstones.</div>
+      </a>
+      <a class="card" href="https://coursera.org/share/e3e9154241d8a92c3593afa225bf5422" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">AI in Marketing ↗</div>
+        <div class="card-body">University of Virginia · 2023<br>AI and data-driven insights applied to digital marketing strategy and audience behaviour.</div>
+      </a>
+      <a class="card" href="https://coursera.org/share/0943b886ae9e8aa185a993451b27c0c1" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Visual Perception &amp; the Brain ↗</div>
+        <div class="card-body">Duke University · 2023<br>Neuroscience of vision and perceptual systems — directly informing immersive XR design.</div>
+      </a>
+      <a class="card" href="https://coursera.org/share/de66c36b3b0aad441959d5e70041bf23" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Introduction to Virtual Reality ↗</div>
+        <div class="card-body">University of London · 2024<br>Foundations of VR technology, presence theory, and immersive experience design.</div>
+      </a>
+      <a class="card" href="https://www.linkedin.com/posts/velmurugan-c_culturalheritage-ar-vr-activity-7315825358090432513-KTHI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC8qSzoBhFJQZcgwpkU3iFF1JhdwiQtpi4I" target="_blank" style="text-decoration:none;display:block">
+        <div class="card-title">Bridging Time &amp; Space: AR/VR &amp; Cultural Heritage ↗</div>
+        <div class="card-body">BrightTALK Webinar · 2025<br>Attended "Bridging Time and Space: How AR/VR Revives and Reimagines Cultural Heritage" — presented by Vahé Karamian &amp; Xianghan Wang. Directly aligned with the Sands of Time AR project at Swansea University.</div>
+      </a>
+    </div>
+  </div>
+</section>
 <!-- ══ HIRE ═══════════════════════════════════ -->
 <section class="era" id="era-hire" style="min-height:80vh">
   <div class="era-divider"></div>
@@ -937,11 +1083,10 @@ a,button,.tl-dot{cursor:none}
     <p class="era-meta reveal">Available — 2026</p>
     <h2 class="hire-title reveal">Let's build<br>something<br>extraordinary.</h2>
     <p class="hire-sub reveal">
-      Rare hybrid profile — Technical Builder × Creative Director × AI Thinker.
-      Open to XR roles, research collaborations, and PhD opportunities in the UK and Europe.
+      Open to XR roles, filmmaking collaborations, research partnerships, and PhD opportunities in the UK &amp; Worldwide.
     </p>
     <div class="hire-links reveal">
-      <a class="hire-link" href="mailto:ai.velmuruganc@gmail.com">ai.velmuruganc@gmail.com</a>
+      <a class="hire-link" href="mailto:ai.velmuruganc@gmail.com">ai.velmuruganc@gmail.com ✉</a>
       <a class="hire-link" href="https://linkedin.com/in/velmurugan-c" target="_blank">LinkedIn</a>
       <a class="hire-link" href="https://github.com/Vela-D7" target="_blank">GitHub</a>
       <a class="hire-link" href="#era-hero">Back to top</a>
@@ -990,13 +1135,16 @@ scene.add(particles);
 
 // Era configs
 const eraCfg = {
-  hero:    {r:0.9, g:0.9, b:0.9, speed:0.3, mode:'drift'},
-  film:    {r:0.85, g:0.6, b:0.1, speed:0.25, mode:'drift'},
-  ai:      {r:0.0, g:0.85, b:1.0, speed:1.8, mode:'matrix'},
-  heritage:{r:0.9, g:0.5, b:0.2, speed:0.4, mode:'sand'},
-  vr:      {r:1.0, g:0.0, b:0.95, speed:0.9, mode:'orbit'},
-  xr:      {r:0.35, g:0.6, b:1.0, speed:0.2, mode:'glass'},
-  hire:    {r:0.9, g:0.9, b:0.9, speed:0.2, mode:'drift'},
+  hero:       {r:0.9,  g:0.9,  b:0.9,  speed:0.3,  mode:'drift'},
+  film:       {r:0.85, g:0.6,  b:0.1,  speed:0.25, mode:'drift'},
+  ai:         {r:0.0,  g:1.0,  b:0.25, speed:1.8,  mode:'matrix'},
+  blog:       {r:0.31, g:0.56, b:1.0,  speed:0.6,  mode:'wave'},
+  heritage:   {r:0.9,  g:0.5,  b:0.2,  speed:0.4,  mode:'sand'},
+  vr:         {r:1.0,  g:0.0,  b:0.95, speed:0.9,  mode:'orbit'},
+  xr:         {r:0.35, g:0.6,  b:1.0,  speed:0.2,  mode:'glass'},
+  experience: {r:0.75, g:0.32, b:1.0,  speed:0.35, mode:'drift'},
+  cert:       {r:0.06, g:0.73, b:0.51, speed:0.3,  mode:'wave'},
+  hire:       {r:0.9,  g:0.9,  b:0.9,  speed:0.2,  mode:'drift'},
 };
 
 let currentEra = 'hero';
@@ -1041,6 +1189,19 @@ function animate(){
       const r = 40 + Math.sin(phase[i]*3)*30;
       posArr[ix] += (Math.cos(angle)*r*0.001 - posArr[ix]*0.001);
       posArr[iy] += Math.sin(t*0.7+phase[i])*0.03;
+    } else if(targetCfg.mode==='wave'){
+      // Slow ocean wave for blog
+      posArr[ix] += Math.sin(t*0.4 + phase[i]*2)*0.02;
+      posArr[iy] += Math.cos(t*0.3 + phase[i])*0.015;
+      posArr[iz] += Math.sin(t*0.2 + phase[i]*1.5)*0.01;
+      if(Math.abs(posArr[ix])>100) posArr[ix]*=-0.9;
+      if(Math.abs(posArr[iy])>100) posArr[iy]*=-0.9;
+    } else if(targetCfg.mode==='glass'){
+      // Gentle float for XR glassmorphism
+      posArr[ix] += Math.sin(t*0.15+phase[i])*0.018;
+      posArr[iy] += Math.cos(t*0.12+phase[i]*0.7)*0.018;
+      if(Math.abs(posArr[ix])>100) posArr[ix]*=-0.95;
+      if(Math.abs(posArr[iy])>100) posArr[iy]*=-0.95;
     } else {
       // Default drift
       posArr[ix] += vel[ix]*currentCfg.speed;
@@ -1137,9 +1298,9 @@ window.addEventListener('resize',()=>{
 // ── ERA DETECTION ────────────────────────────────────────────────────
 const eraMap = {
   'era-hero':'hero','era-film':'film','era-ai':'ai',
-  'era-heritage':'heritage','era-vr':'vr','era-xr':'xr','era-experience':'xr','era-hire':'hire'
+  'era-heritage':'heritage','era-vr':'vr','era-xr':'xr','era-blog':'blog','era-experience':'experience','era-cert':'cert','era-hire':'hire'
 };
-const eraClasses = ['era-film','era-ai','era-heritage','era-vr','era-xr'];
+const eraClasses = ['era-film','era-ai','era-blog','era-heritage','era-vr','era-xr','era-experience','era-cert'];
 
 const sectionObs = new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
